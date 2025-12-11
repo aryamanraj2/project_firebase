@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "455496859956",
+    "project_id": "bruhmeme-67141",
+    "storage_bucket": "bruhmeme-67141.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:455496859956:android:8a8be7139d89bfc4c7e561",
+        "android_client_info": {
+          "package_name": "com.nsutrack.project_firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "455496859956-7vrv1turj8kr1020ta3k91hr90i5gcvf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nsutrack.project_firebase",
+            "certificate_hash": "0b67d3f23889be915ed4ff6e29d29a1a683504ea"
+          }
+        },
+        {
+          "client_id": "455496859956-jtn5lcdc7bbpmrggiurjj8oqp6u2fs0m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtR7VYiPRBlvuR5ySuIGvsnNGBzrfjgMQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "455496859956-jtn5lcdc7bbpmrggiurjj8oqp6u2fs0m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

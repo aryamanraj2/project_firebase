@@ -19,6 +19,7 @@ import androidx.compose.ui.Modifier
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.firestore.FirebaseFirestore
+import com.nsutrack.project_firebase.data.repository.SavedMoviesManager
 import com.nsutrack.project_firebase.ui.theme.ProjectFirebaseTheme
 
 class MainActivity : ComponentActivity() {
@@ -30,6 +31,9 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // Initialize SavedMoviesManager
+        SavedMoviesManager.init(applicationContext)
 
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
@@ -289,6 +293,11 @@ class MainActivity : ComponentActivity() {
                         onSignUpClick = { currentScreen = Screen.SignUp },
                         onGoogleSignInClick = {
                             signInWithGoogle()
+                        },
+                        onDevBypassClick = {
+                            // DEV BYPASS - Skip auth and go to Home with test user
+                            currentUser = Triple("Test User", "dev@test.com", "Not Specified")
+                            currentScreen = Screen.Home
                         }
                     )
                 }

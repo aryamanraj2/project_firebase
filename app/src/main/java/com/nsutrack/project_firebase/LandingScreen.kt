@@ -17,7 +17,8 @@ import com.nsutrack.project_firebase.ui.theme.ProjectFirebaseTheme
 fun LandingScreen(
     onSignInClick: () -> Unit = {},
     onSignUpClick: () -> Unit = {},
-    onGoogleSignInClick: () -> Unit = {}
+    onGoogleSignInClick: () -> Unit = {},
+    onDevBypassClick: () -> Unit = {} // Temp auth bypass for testing
 ) {
     Scaffold(containerColor = MaterialTheme.colorScheme.background) { padding ->
         Column(
@@ -129,6 +130,18 @@ fun LandingScreen(
                         text = "New to the app? Sign up",
                         style = MaterialTheme.typography.bodyMedium.copy(
                             color = MaterialTheme.colorScheme.onBackground,
+                            fontWeight = FontWeight.Medium
+                        )
+                    )
+                }
+
+                // DEV BYPASS - Remove before production
+                Spacer(modifier = Modifier.height(16.dp))
+                TextButton(onClick = onDevBypassClick) {
+                    Text(
+                        text = "[DEV] Skip Auth",
+                        style = MaterialTheme.typography.bodySmall.copy(
+                            color = Color.Red.copy(alpha = 0.7f),
                             fontWeight = FontWeight.Medium
                         )
                     )
